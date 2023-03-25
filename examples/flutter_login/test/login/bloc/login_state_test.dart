@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:flutter_login/login/login.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:formz/formz.dart';
 
 void main() {
   const username = Username.dirty('username');
@@ -17,7 +16,10 @@ void main() {
 
     test('returns object with updated status when status is passed', () {
       expect(
-        LoginState().copyWith(status: FormzStatus.pure),
+        LoginState().copyWith(
+          username: Username.pure(),
+          password: Password.pure(),
+        ),
         LoginState(),
       );
     });

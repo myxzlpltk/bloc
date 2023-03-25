@@ -47,22 +47,20 @@ void main() {
         expect: () => const <LoginState>[
           LoginState(
             username: Username.dirty('username'),
-            status: FormzStatus.invalid,
           ),
           LoginState(
             username: Username.dirty('username'),
             password: Password.dirty('password'),
-            status: FormzStatus.valid,
           ),
           LoginState(
             username: Username.dirty('username'),
             password: Password.dirty('password'),
-            status: FormzStatus.submissionInProgress,
+            status: FormzSubmissionStatus.inProgress,
           ),
           LoginState(
             username: Username.dirty('username'),
             password: Password.dirty('password'),
-            status: FormzStatus.submissionSuccess,
+            status: FormzSubmissionStatus.success,
           ),
         ],
       );
@@ -89,22 +87,20 @@ void main() {
         expect: () => const <LoginState>[
           LoginState(
             username: Username.dirty('username'),
-            status: FormzStatus.invalid,
           ),
           LoginState(
             username: Username.dirty('username'),
             password: Password.dirty('password'),
-            status: FormzStatus.valid,
           ),
           LoginState(
             username: Username.dirty('username'),
             password: Password.dirty('password'),
-            status: FormzStatus.submissionInProgress,
+            status: FormzSubmissionStatus.inProgress,
           ),
           LoginState(
             username: Username.dirty('username'),
             password: Password.dirty('password'),
-            status: FormzStatus.submissionFailure,
+            status: FormzSubmissionStatus.failure,
           ),
         ],
       );
